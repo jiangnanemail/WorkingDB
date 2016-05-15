@@ -1,0 +1,2 @@
+项目说明：
+arxcommonlib为arx开发中提取的公共方法和类。

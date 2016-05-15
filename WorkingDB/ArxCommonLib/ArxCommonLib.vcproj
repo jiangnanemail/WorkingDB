@@ -4,6 +4,7 @@
 	Version="8.00"
 	Name="ArxCommonLib"
 	ProjectGUID="{7CBDCE75-D5AB-477F-BB57-84EB6F4B9BE0}"
+	RootNamespace="ArxCommonLib"
 	>
 	<Platforms>
 		<Platform
@@ -44,7 +45,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\..\DevKit\ObjectARX 2008\inc"
+				AdditionalIncludeDirectories="&quot;..\..\..\DevKit\ObjectARX 2008\inc&quot;;..\..\..\inc"
 				AdditionalUsingDirectories="C:\Program Files\AutoCAD 2008"
 				PreprocessorDefinitions="WIN32;_WINDOWS;ARXCOMMONLIB_MODULE;_AFXEXT;_ACRXAPP"
 				StringPooling="false"
@@ -107,6 +108,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				CommandLine="CopyFile.bat"
 			/>
 		</Configuration>
 		<Configuration
@@ -137,7 +139,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="2"
-				AdditionalIncludeDirectories="..\..\..\DevKit\ObjectARX 2008\inc"
+				AdditionalIncludeDirectories="&quot;..\..\..\DevKit\ObjectARX 2008\inc&quot;"
 				AdditionalUsingDirectories="C:\Program Files\AutoCAD 2008"
 				PreprocessorDefinitions="WIN32;_WINDOWS;ARXCOMMONLIB_MODULE;NDEBUG;_AFXEXT;_ACRXAPP"
 				StringPooling="true"
@@ -200,6 +202,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				CommandLine="CopyFile.bat"
 			/>
 		</Configuration>
 		<Configuration
@@ -471,6 +474,18 @@
 			Name="Miscellaneous Files"
 			Filter="reg;rgs;mak;clw;vsdir;vsz;css;inf;vcproj;csproj"
 			>
+		</Filter>
+		<Filter
+			Name="Entity"
+			>
+			<File
+				RelativePath=".\Entity\ArxEntityOperation.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Entity\ArxEntityOperation.h"
+				>
+			</File>
 		</Filter>
 	</Files>
 	<Globals>
