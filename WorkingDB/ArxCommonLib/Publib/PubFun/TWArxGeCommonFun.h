@@ -58,7 +58,7 @@ public:
 	static int Relation( IN const AcGeLineSeg2d& Ln, IN const AcGePoint2d& Pt );
 	static int Relation( IN const AcGePoint2d& ptFrom, IN const AcGePoint2d& ptTo, IN const AcGePoint2d& pt );
 
-};
+}; 
 
 
 
