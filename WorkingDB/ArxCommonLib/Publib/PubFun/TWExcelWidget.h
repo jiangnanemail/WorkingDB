@@ -5,7 +5,7 @@
 */
 
 #pragma region CTwRangeWidget
-class CTwRangeWidget
+class ArxCommonLib_CLASS CTwRangeWidget
 {
 public:
 	CTwRangeWidget();
@@ -65,7 +65,7 @@ protected:
 
 
 #pragma region CTwWorkSheetWidget
-class CTwWorkSheetWidget
+class ArxCommonLib_CLASS CTwWorkSheetWidget
 {
 public:
 
@@ -104,7 +104,7 @@ protected:
 
 
 #pragma region CTwWorkSheetsWidget
-class CTwWorkSheetsWidget
+class ArxCommonLib_CLASS CTwWorkSheetsWidget
 {
 public:
 	CTwWorkSheetsWidget();
@@ -143,7 +143,7 @@ protected:
 
 
 #pragma region CTwExcleWidget
-class CTwExcleWidget
+class ArxCommonLib_CLASS CTwExcleWidget
 {
 public:
 	CTwExcleWidget();

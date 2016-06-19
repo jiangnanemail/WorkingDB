@@ -2,7 +2,7 @@
 
 
 #pragma region TWWorkingDatabase
-class TWWorkingDatabase
+class ArxCommonLib_CLASS TWWorkingDatabase
 {
 public:
 	TWWorkingDatabase();
@@ -34,7 +34,7 @@ private:
 
 //当前和外部数据库切换
 #pragma region CTwWorkingDatebaseSwitch
-class CTwWorkingDatebaseSwitch
+class ArxCommonLib_CLASS CTwWorkingDatebaseSwitch
 {
 public:
 	CTwWorkingDatebaseSwitch();

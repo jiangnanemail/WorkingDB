@@ -24,7 +24,7 @@
 //-----------------------------------------------------------------------------
 #include "StdAfx.h"
 #include "resource.h"
-
+#include "./pmdx/TWDTM.h"
 //-----------------------------------------------------------------------------
 #define szRDS _RXST("")
 
@@ -54,7 +54,7 @@ public:
 
 		// TODO: Unload dependencies here
 
-		return (retCode) ;
+		return (retCode);
 	}
 
 	virtual void RegisterServerComponents () {
@@ -62,14 +62,46 @@ public:
 
 
 	// - ArxToolSet._MyCommand1 command (do not rename)
-	static void ArxToolSet_MyCommand1(void)
+	static void ArxToolSet_MyCommand11(void)
 	{
-		// Add your code for command ArxToolSet._MyCommand1 here
-		ads_alert( _T("hellow world!") );
+		int n = 2000;
+		int dRange = 1000;
+		vertexSet  Vertices;
+		triangleSet Triangles;
+
+		for (int i = 0; i < n; i++)
+		{
+			double x = (double)(rand() % dRange);
+			double y = (double)(rand() % dRange);
+			double z = (double)(rand() % 200);
+			Vertices.insert(CTwVertex(x, y, z) );
+		}
+
+		CTwDelaunay d;
+		d.Triangulate(Vertices, Triangles);
+
+		edgeSet edges;
+		d.TrianglesToEdges( Triangles, edges );
+		int size = edges.size();
+		TWArxLineParam Ln1;
+
+		vector<AcDbEntity*> vEnt;
+		cedgeIterator IteB = edges.begin();
+		cedgeIterator IteE = edges.end();
+		for ( ; IteB!= IteE; IteB++ )
+		{
+			Ln1.m_PtStart = (IteB)->m_pV0->GetPoint();
+			Ln1.m_PtEnd   = (IteB)->m_pV1->GetPoint();
+			
+			vEnt.push_back( Ln1.CreateEntity() );
+	
+		}
+
+		TWArxEntityFun::PostCurSpace( vEnt, vector<AcDbObjectId>() );
 	}
 } ;
 
 //-----------------------------------------------------------------------------
 IMPLEMENT_ARX_ENTRYPOINT(CArxToolSetApp)
 
-ACED_ARXCOMMAND_ENTRY_AUTO(CArxToolSetApp, ArxToolSet, _MyCommand1, MyCommand1, ACRX_CMD_TRANSPARENT, NULL)
+ACED_ARXCOMMAND_ENTRY_AUTO(CArxToolSetApp, ArxToolSet, _MyCommand11, MyCommand11, ACRX_CMD_TRANSPARENT, NULL)

@@ -8,7 +8,7 @@
 
 //块参照工具类
 #pragma region TWBlockRefenceTool
-class TWBlockRefenceTool
+class ArxCommonLib_CLASS TWBlockRefenceTool
 {
 public:
 	TWBlockRefenceTool();
@@ -58,7 +58,7 @@ protected:
 
 
 #pragma region TWLockCurDoc
-class TWLockCurDoc
+class ArxCommonLib_CLASS TWLockCurDoc
 {
 public:
 	TWLockCurDoc()
@@ -75,7 +75,7 @@ public:
 
 #pragma region CTwAutoTransaction
 
-class CTwAutoTransaction
+class ArxCommonLib_CLASS CTwAutoTransaction
 {
 public:
 	//m_bCommit是否提交事务;
@@ -99,7 +99,7 @@ public:
 	}
 
 private:
-	CTwAutoTransaction() {}
+	//CTwAutoTransaction() {}
 	BOOL m_bUsed;
 };
 #pragma endregion CTwAutoTransaction
@@ -109,7 +109,7 @@ private:
 
 #pragma region TWZoomExt
 
-class TWZoomExt
+class ArxCommonLib_CLASS TWZoomExt
 {
 public:
 	TWZoomExt() { ads_command(RTSTR, _T("zoom"), RTSTR, _T("E"), 0); } 
@@ -121,7 +121,7 @@ public:
 
 #pragma region TWZoomObj
 
-class TWZoomObj
+class ArxCommonLib_CLASS TWZoomObj
 {
 public:
 	TWZoomObj( ads_name ent ) { ads_command(RTSTR, _T("zoom"), RTSTR, _T("o"), RTENAME, ent, RTSTR,_T(""), 0 ); } 
@@ -139,7 +139,7 @@ public:
 
 //图层代理类
 #pragma region TWArxLayer
-class TWArxLayer : public TWWorkingDatabase
+class ArxCommonLib_CLASS TWArxLayer : public TWWorkingDatabase
 {
 public:
 	TWArxLayer();
@@ -207,7 +207,7 @@ protected:
 
 //图层管理
 #pragma region TWArxLayerMan
-class TWArxLayerMan : public TWWorkingDatabase
+class ArxCommonLib_CLASS TWArxLayerMan : public TWWorkingDatabase
 {
 public:
 	TWArxLayerMan();
@@ -266,7 +266,7 @@ protected:
 
 //扩展字典
 #pragma region CTwArxDictionary
-class CTwArxDictionary
+class ArxCommonLib_CLASS CTwArxDictionary
 {
 public:
 	CTwArxDictionary();
@@ -315,7 +315,7 @@ protected:
 
 
 #pragma region CTwAutoRedraw
-class CTwAutoRedraw
+class ArxCommonLib_CLASS CTwAutoRedraw
 {
 public:
 	CTwAutoRedraw();
@@ -344,7 +344,7 @@ protected:
 
 //系统变量
 #pragma region CTwSymstemVar
-class CTwSymstemVar
+class ArxCommonLib_CLASS CTwSymstemVar
 {
 public:
 	CTwSymstemVar()                  { m_Buf.rbnext = NULL;};
@@ -360,7 +360,7 @@ protected:
 
 
 #pragma region CTwSymstemVar_INT
-class CTwSymstemVar_INT : CTwSymstemVar
+class ArxCommonLib_CLASS CTwSymstemVar_INT : CTwSymstemVar
 {
 public:
 	CTwSymstemVar_INT( const CString& strSys, int nNew )

@@ -4,6 +4,7 @@
 	Version="8.00"
 	Name="ArxToolSet"
 	ProjectGUID="{803AF278-88EB-4CB6-8EED-9C31B3C06B3E}"
+	RootNamespace="ArxToolSet"
 	>
 	<Platforms>
 		<Platform
@@ -18,8 +19,8 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)"
-			IntermediateDirectory="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)"
+			OutputDirectory="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			IntermediateDirectory="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
 			ConfigurationType="2"
 			UseOfMFC="2"
 			UseOfATL="0"
@@ -56,6 +57,7 @@
 				ForceConformanceInForLoopScope="true"
 				RuntimeTypeInfo="true"
 				UsePrecompiledHeader="2"
+				ProgramDataBaseFileName="$(IntDir)\$(ProjectName).pdb"
 				WarningLevel="1"
 				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="4"
@@ -74,106 +76,15 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(outdir)/ArxToolSet.arx"
+				AdditionalDependencies="ArxCommonLib.lib"
+				OutputFile="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)/ArxToolSet.arx"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="..\..\..\DevKit\ObjectARX 2008\lib"
+				AdditionalLibraryDirectories="&quot;..\..\..\DevKit\ObjectARX 2008\lib&quot;;&quot;..\..\..\bin\Win32\Debug&quot;"
 				LinkDLL="true"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(OutDir)/ArxToolSet.pdb"
 				SubSystem="2"
-				ImportLibrary="$(OutDir)/ArxToolSet.lib"
-				TargetMachine="1"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCManifestTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCAppVerifierTool"
-			/>
-			<Tool
-				Name="VCWebDeploymentTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
-		<Configuration
-			Name="Release|Win32"
-			OutputDirectory="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)"
-			IntermediateDirectory="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)"
-			ConfigurationType="2"
-			UseOfMFC="2"
-			UseOfATL="0"
-			CharacterSet="1"
-			ManagedExtensions="0"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-				Optimization="2"
-				AdditionalIncludeDirectories="&quot;..\..\..\DevKit\ObjectARX 2008\inc&quot;;..\..\..\inc"
-				AdditionalUsingDirectories="C:\Program Files\AutoCAD 2008"
-				PreprocessorDefinitions="WIN32;_WINDOWS;ARXTOOLSET_MODULE;NDEBUG;_AFXEXT;_ACRXAPP"
-				StringPooling="true"
-				MinimalRebuild="false"
-				BasicRuntimeChecks="0"
-				RuntimeLibrary="2"
-				BufferSecurityCheck="true"
-				TreatWChar_tAsBuiltInType="true"
-				ForceConformanceInForLoopScope="true"
-				RuntimeTypeInfo="true"
-				UsePrecompiledHeader="2"
-				WarningLevel="1"
-				Detect64BitPortabilityProblems="true"
-				DebugInformationFormat="0"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions=""
-				Culture="1033"
-				AdditionalIncludeDirectories="$(IntDir)"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLinkerTool"
-				OutputFile="$(outdir)/ArxToolSet.arx"
-				LinkIncremental="2"
-				LinkDLL="true"
-				GenerateDebugInformation="false"
-				ProgramDatabaseFile=""
-				SubSystem="2"
-				ImportLibrary="$(OutDir)/ArxToolSet.lib"
+				ImportLibrary="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)/ArxToolSet.lib"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -266,6 +177,99 @@
 				SubSystem="2"
 				ImportLibrary="$(OutDir)/ArxToolSet.lib"
 				TargetMachine="17"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
+				Name="VCWebDeploymentTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			IntermediateDirectory="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="2"
+			UseOfMFC="2"
+			UseOfATL="0"
+			CharacterSet="1"
+			ManagedExtensions="0"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="2"
+				AdditionalIncludeDirectories="&quot;..\..\..\DevKit\ObjectARX 2008\inc&quot;;..\..\..\inc"
+				AdditionalUsingDirectories="C:\Program Files\AutoCAD 2008"
+				PreprocessorDefinitions="WIN32;_WINDOWS;ARXTOOLSET_MODULE;NDEBUG;_AFXEXT;_ACRXAPP"
+				StringPooling="true"
+				MinimalRebuild="false"
+				BasicRuntimeChecks="0"
+				RuntimeLibrary="2"
+				BufferSecurityCheck="true"
+				TreatWChar_tAsBuiltInType="true"
+				ForceConformanceInForLoopScope="true"
+				RuntimeTypeInfo="true"
+				UsePrecompiledHeader="2"
+				ProgramDataBaseFileName="$(IntDir)\$(ProjectName).pdb"
+				WarningLevel="1"
+				Detect64BitPortabilityProblems="true"
+				DebugInformationFormat="0"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions=""
+				Culture="1033"
+				AdditionalIncludeDirectories="$(IntDir)"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLinkerTool"
+				OutputFile="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)/ArxToolSet.arx"
+				LinkIncremental="2"
+				LinkDLL="true"
+				GenerateDebugInformation="false"
+				ProgramDatabaseFile=""
+				SubSystem="2"
+				ImportLibrary="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)/ArxToolSet.lib"
+				TargetMachine="1"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -415,7 +419,7 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32"
+					Name="Debug|x64"
 					>
 					<Tool
 						Name="VCCLCompilerTool"
@@ -423,7 +427,7 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug|x64"
+					Name="Release|Win32"
 					>
 					<Tool
 						Name="VCCLCompilerTool"
@@ -470,6 +474,34 @@
 			Name="Miscellaneous Files"
 			Filter="reg;rgs;mak;clw;vsdir;vsz;css;inf;vcproj;csproj"
 			>
+		</Filter>
+		<Filter
+			Name="ArxTool"
+			>
+			<Filter
+				Name="图库"
+				>
+			</Filter>
+			<Filter
+				Name="平面地形"
+				>
+				<File
+					RelativePath=".\PMDX\DEMImpl.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\PMDX\DEMImpl.h"
+					>
+				</File>
+				<File
+					RelativePath=".\PMDX\TWDTM.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\PMDX\TWDTM.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 	</Files>
 	<Globals>

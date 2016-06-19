@@ -19,8 +19,8 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)"
-			IntermediateDirectory="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)"
+			OutputDirectory="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			IntermediateDirectory="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
 			ConfigurationType="2"
 			UseOfMFC="2"
 			UseOfATL="0"
@@ -76,14 +76,14 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(outdir)/ArxCommonLib.arx"
+				OutputFile="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)/ArxCommonLib.arx"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="..\..\..\DevKit\ObjectARX 2008\lib"
 				LinkDLL="true"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(OutDir)/ArxCommonLib.pdb"
 				SubSystem="2"
-				ImportLibrary="$(OutDir)/ArxCommonLib.lib"
+				ImportLibrary="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)/ArxCommonLib.lib"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -205,8 +205,8 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)"
-			IntermediateDirectory="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)"
+			OutputDirectory="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			IntermediateDirectory="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
 			ConfigurationType="2"
 			UseOfMFC="2"
 			UseOfATL="0"
@@ -262,14 +262,14 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(outdir)/ArxCommonLib.arx"
+				OutputFile="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)/ArxCommonLib.arx"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="..\..\..\DevKit\ObjectARX 2008\lib"
 				LinkDLL="true"
 				GenerateDebugInformation="false"
 				ProgramDatabaseFile=""
 				SubSystem="2"
-				ImportLibrary="$(OutDir)/ArxCommonLib.lib"
+				ImportLibrary="..\..\..\Bin\$(PlatformName)\$(ConfigurationName)/ArxCommonLib.lib"
 				TargetMachine="1"
 			/>
 			<Tool

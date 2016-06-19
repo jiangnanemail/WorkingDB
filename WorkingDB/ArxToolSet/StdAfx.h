@@ -97,6 +97,9 @@
 //-----------------------------------------------------------------------------
 #include "DocData.h" //- Your document specific data class holder
 
+#include "all_in_one.h"
+#include "./CadLib/arx_all_in_one.h"
+
 //- Declare it as an extern here so that it becomes available in all modules
 extern AcApDataManager<CDocData> DocVars ;
 

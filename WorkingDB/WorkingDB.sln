@@ -9,6 +9,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArxCommonLib", "ArxCommonLi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArxToolSet", "ArxToolSet\ArxToolSet.vcproj", "{803AF278-88EB-4CB6-8EED-9C31B3C06B3E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MfcCommonLib", "MfcCommonLib\MfcCommonLib.vcproj", "{33379D5E-C17F-4731-AE0C-F1E5644A7190}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CRTCommonLib", "CRTCommonLib\CRTCommonLib.vcproj", "{263F9449-7ACD-4896-971F-FD958BA79526}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -18,7 +22,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BFC50299-2429-40C9-8304-4CD833247B6A}.Debug|Win32.ActiveCfg = Debug|Win32
-		{BFC50299-2429-40C9-8304-4CD833247B6A}.Debug|Win32.Build.0 = Debug|Win32
 		{BFC50299-2429-40C9-8304-4CD833247B6A}.Debug|x64.ActiveCfg = Debug|Win32
 		{BFC50299-2429-40C9-8304-4CD833247B6A}.Release|Win32.ActiveCfg = Release|Win32
 		{BFC50299-2429-40C9-8304-4CD833247B6A}.Release|Win32.Build.0 = Release|Win32
@@ -35,11 +38,25 @@ Global
 		{803AF278-88EB-4CB6-8EED-9C31B3C06B3E}.Release|Win32.ActiveCfg = Release|Win32
 		{803AF278-88EB-4CB6-8EED-9C31B3C06B3E}.Release|Win32.Build.0 = Release|Win32
 		{803AF278-88EB-4CB6-8EED-9C31B3C06B3E}.Release|x64.ActiveCfg = Release|Win32
+		{33379D5E-C17F-4731-AE0C-F1E5644A7190}.Debug|Win32.ActiveCfg = Debug|Win32
+		{33379D5E-C17F-4731-AE0C-F1E5644A7190}.Debug|Win32.Build.0 = Debug|Win32
+		{33379D5E-C17F-4731-AE0C-F1E5644A7190}.Debug|x64.ActiveCfg = Debug|Win32
+		{33379D5E-C17F-4731-AE0C-F1E5644A7190}.Release|Win32.ActiveCfg = Release|Win32
+		{33379D5E-C17F-4731-AE0C-F1E5644A7190}.Release|Win32.Build.0 = Release|Win32
+		{33379D5E-C17F-4731-AE0C-F1E5644A7190}.Release|x64.ActiveCfg = Release|Win32
+		{263F9449-7ACD-4896-971F-FD958BA79526}.Debug|Win32.ActiveCfg = Debug|Win32
+		{263F9449-7ACD-4896-971F-FD958BA79526}.Debug|Win32.Build.0 = Debug|Win32
+		{263F9449-7ACD-4896-971F-FD958BA79526}.Debug|x64.ActiveCfg = Debug|Win32
+		{263F9449-7ACD-4896-971F-FD958BA79526}.Release|Win32.ActiveCfg = Release|Win32
+		{263F9449-7ACD-4896-971F-FD958BA79526}.Release|Win32.Build.0 = Release|Win32
+		{263F9449-7ACD-4896-971F-FD958BA79526}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7CBDCE75-D5AB-477F-BB57-84EB6F4B9BE0} = {232ECB96-7832-49DA-94B5-AD6CCA7C638D}
+		{33379D5E-C17F-4731-AE0C-F1E5644A7190} = {232ECB96-7832-49DA-94B5-AD6CCA7C638D}
+		{263F9449-7ACD-4896-971F-FD958BA79526} = {232ECB96-7832-49DA-94B5-AD6CCA7C638D}
 	EndGlobalSection
 EndGlobal
